@@ -49,4 +49,15 @@
     Damit wurde ein Gegenbeispiel, bei der AVL-Baum keine Kommutativität besitzt, gefunden und die Aussage widerlegt.
 \end{proof}
 
+\section*{Aufgabe 2}
+
+\subsection*{2}
+\begin{proof}
+    Bei einem Rot-Schwarz-Baum muss jeder Pfad eines Knoten zu seinen Blättern die gleiche Anzahl an schwarzen Knoten enthalten.
+    Bei einem perfekt ausballancierten Rot-Schwarz-Baum wäre jeder Knoten schwarz.
+    Damit also von einem Knoten ein Pfad zu einem Blatt länger wird als ein anderer Pfad, muss man rote Knoten einfügen.
+    Da jedoch ein Knoten nur rot sein kann, wenn beide seiner Nachfolger schwarz sind, kann auf einem Pfad zu einem Blatt höchstens jeder zweite Knoten rot sein.
+    Da ein Pfad mit roten Knoten aber natürlich immer noch genauso viele schwarze Knoten enthalten muss wie ein Pfad ohne rote Knoten, kann der Pfad mit roten Knoten höchstens doppelt so lang sein wie der ohne.
+\end{proof}
+
 \end{document}
