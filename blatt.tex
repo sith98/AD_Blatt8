@@ -1,0 +1,52 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[paper=a4paper,margin=35mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newcommand{\W}{\operatorname{W}}
+
+\title{AD -- Übungsblatt 8}
+\author{Simon Thelen}
+
+\begin{document}
+
+\maketitle
+
+\section*{Aufgabe 1}
+
+\subsection*{1}
+\begin{proof}
+    Sei $k$ ein Knoten mit zwei Nachfolgern. Dann liegt der Inorder-Nachfolger $n$ von $k$ innerhalb des Teilbaums mit dem rechten Nachfolger von $k$ als Wurzel.
+    Der Inorder-Nachfolger $n$ ist der Knoten mit dem kleinsten Wert $\W(n)$, der größer ist als $\W(k)$.
+    $n$ kann keinen linken Nachfolger $l$ haben, denn es müsste $\W(k) < \W(l) < \W(n)$.
+    Da jedoch $n$ der Inorder-Nachfolger ist, kann es im Baum keinen Wert zwischen $\W(k)$ und $\W(n)$ geben.
+    Somit hat $n$ maximal einen Nachfolger.
+\end{proof}
+
+\subsection*{2}
+\begin{proof}
+    Gegeben sei der AVL-Baum mit Inorder-Darstellung
+    \begin{equation*}
+        (((n, 1, n), 2, n), 3, ((n, 4, n), 5, (n, 6, (n, 7, n))))
+        \text{.}
+    \end{equation*}
+    Wird in dieser Reihenfolge \texttt{Delete(7)} und \texttt{Delete(4)} aufgerufen, ergibt sich der Baum
+    \begin{equation*}
+        (((n, 1, n), 2, n), 3, (n, 5, (n, 6, n)))
+        \text{.}
+    \end{equation*}
+    Geschehen die beiden \texttt{Delete}-Aufrufe jedoch umgekehrt, ist der resultierende Baum
+    \begin{equation*}
+        (((n, 1, n), 2, n), 3, ((n, 5, n), 6, n)
+        \text{,}
+    \end{equation*}
+    da bei letzterer Variante beim Löschen von \texttt{4} eine Linksrotation stattfindet, die bei Variante~1 fehlt.
+
+    Damit wurde ein Gegenbeispiel, bei der AVL-Baum keine Kommutativität besitzt, gefunden und die Aussage widerlegt.
+\end{proof}
+
+\end{document}
