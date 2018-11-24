@@ -2,10 +2,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
-%\usepackage[paper=a4paper,margin=35mm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+%\usepackage[paper=a4paper,margin=35mm]{geometry}
 
 \newcommand{\W}{\operatorname{W}}
 
@@ -51,6 +53,12 @@
 
 \section*{Aufgabe 2}
 
+\subsection*{1}
+\begin{figure}[H]
+    \includegraphics[width=8cm]{minimal_tree}
+    \centering
+\end{figure}
+
 \subsection*{2}
 \begin{proof}
     Bei einem Rot-Schwarz-Baum muss jeder Pfad eines Knoten zu seinen Blättern die gleiche Anzahl an schwarzen Knoten enthalten.
@@ -59,5 +67,15 @@
     Da jedoch ein Knoten nur rot sein kann, wenn beide seiner Nachfolger schwarz sind, kann auf einem Pfad zu einem Blatt höchstens jeder zweite Knoten rot sein.
     Da ein Pfad mit roten Knoten aber natürlich immer noch genauso viele schwarze Knoten enthalten muss wie ein Pfad ohne rote Knoten, kann der Pfad mit roten Knoten höchstens doppelt so lang sein wie der ohne.
 \end{proof}
+
+\section*{Aufgabe 3 und 4}
+\begin{figure}
+    \includegraphics[height=\textwidth, angle=-90]{b_tree1}
+    \centering
+\end{figure}
+\begin{figure}
+    \includegraphics[width=\textwidth]{b_tree2}
+    \centering
+\end{figure}
 
 \end{document}
